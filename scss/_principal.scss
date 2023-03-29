@@ -45,8 +45,9 @@
     .btn-success{
         display: inline-block;
         margin:2rem auto;
-        border-color: white;
-        background:rgba(16, 214, 62, 0.47);
+        color:white;
+        border:1px solid green;
+        background: rgba(0, 0, 0, 0.632);
         width: 100px;
 
         a{
