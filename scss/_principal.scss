@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+.carrusel{
+    padding-top: 130px;
+    img{
+        height:220px;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+.principal{
+    
+    h1{
+        font-size:3rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-family:'Skranji', cursive;
+        padding: 1rem;
+        margin-top: 50px;
+    }
+    h2{
+        font-size: 1.7rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: 1rem;
+        font-family: 'Edu NSW ACT Foundation', cursive;
+        margin: 0 20px;
+    }
+    h3{
+        font-size: 1.2rem;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: 1rem;
+        font-family: 'Edu NSW ACT Foundation', cursive;
+    }
+}
+.ingreso{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 10px ;
+    
+    margin: 100px 10%;
+    border: 1px solid rgba(255, 255, 255, 0.503);
+    
+    .btn-success{
+        display: inline-block;
+        margin:2rem auto;
+        border-color: white;
+        background:rgba(16, 214, 62, 0.47);
+        width: 100px;
+
+        a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    }
+    .input-group-text{
+        background: rgb(192, 219, 174) ;
+    }
+}
