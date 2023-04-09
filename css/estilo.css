@@ -1368,6 +1368,9 @@ header nav .navbar-principal {
   background: black;
   padding: 1rem;
 }
+header nav .navbar-principal .navbar-nav a:hover {
+  color: rgb(143, 186, 143);
+}
 header nav .navbar-principal .navbar-collapse {
   justify-content: right;
 }
@@ -1375,13 +1378,13 @@ header nav .navbar-principal a {
   color: white;
   font-size: 1.3rem;
 }
-header nav .navbar-principal .navbar-toggler {
+header nav .navbar-toggler {
   background: rgb(16, 214, 62);
 }
-header nav .navbar-nav .nav-link.active, header nav .navbar-nav .show .nav-link {
-  color: rgb(16, 214, 62);
+header .navbar-nav .nav-link.active, header .navbar-nav .show .nav-link {
+  color: rgb(0, 253, 59);
 }
-header nav img {
+header img {
   width: 100px;
 }
 
@@ -1393,10 +1396,15 @@ footer h6 {
   color: white;
   font-size: 0.8rem;
 }
-footer h2 {
+footer h3 {
   color: rgb(255, 255, 255);
   text-align: center;
   font-size: 1rem;
+}
+@media (min-width: 765px) {
+  footer h3 {
+    font-size: 1.5rem;
+  }
 }
 footer .description {
   display: flex;
@@ -1404,11 +1412,16 @@ footer .description {
   justify-content: space-between;
   margin-top: 0 auto;
 }
-footer .description h3 {
+footer .description h2 {
   font-size: 1.4rem;
   color: white;
   margin: auto;
   font-family: "Skranji", cursive;
+}
+@media (min-width: 765px) {
+  footer .description h2 {
+    font-size: 2rem;
+  }
 }
 footer .description .contactos {
   margin: auto 0;
@@ -1426,8 +1439,19 @@ footer .redes__sociales .redes {
   display: flex;
   justify-content: space-evenly;
 }
+@media (min-width: 765px) {
+  footer .redes__sociales .redes {
+    justify-content: center;
+  }
+}
 footer .redes__sociales .redes img {
   width: 40px;
+}
+@media (min-width: 765px) {
+  footer .redes__sociales .redes img {
+    width: 60px;
+    margin: 0 4.5rem;
+  }
 }
 footer .footer__nav h5 {
   margin: 1.3rem;
@@ -1440,14 +1464,25 @@ footer .footer__nav ul {
   border: 1px solid green;
   padding: 10px;
 }
+@media (min-width: 765px) {
+  footer .footer__nav ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 footer .footer__nav li {
   padding: 0.2rem;
   list-style: none;
+  text-align: center;
 }
 footer .footer__nav a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+}
+@media (min-width: 992px) {
+  footer .footer__nav a {
+    font-size: 1.5rem;
+  }
 }
 footer .footer__nav p {
   font-size: 1.1rem;
@@ -1455,16 +1490,58 @@ footer .footer__nav p {
   font-family: "Edu NSW ACT Foundation", cursive;
   margin-bottom: 0px;
 }
+@media (min-width: 992px) {
+  footer .footer__nav p {
+    font-size: 1.3rem;
+  }
+}
 
 .carrusel {
-  padding-top: 130px;
+  padding-top: 127px;
+}
+@media (min-width: 992px) {
+  .carrusel {
+    display: none;
+  }
 }
 .carrusel img {
-  height: 220px;
+  height: 250px;
   width: 100%;
   border-radius: 10px;
 }
+@media (min-width: 765px) {
+  .carrusel img {
+    height: 400px;
+  }
+}
 
+@media (min-width: 992px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 12%;
+    border: 5px solid black;
+  }
+}
+
+.parte-2 img {
+  padding-top: 127px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: none;
+}
+@media (min-width: 992px) {
+  .parte-2 img {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .principal {
+    padding-top: 150px;
+  }
+}
 .principal h1 {
   font-size: 3rem;
   text-align: center;

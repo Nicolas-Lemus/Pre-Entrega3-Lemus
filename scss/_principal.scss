@@ -1,15 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
 .carrusel{
-    padding-top: 130px;
+    padding-top: 127px;
+
+    @media (min-width:992px) {
+        display: none;
+    }
     img{
-        height:220px;
+        height:250px;
         width: 100%;
         border-radius: 10px;
+
+        @media (min-width:765px) {
+            height: 400px;
+        }
     }
 }
+main{
+    @media (min-width:992px){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 12%;
+        border: 5px solid black;
+    }
+}
+.parte-2{
+    img{
+        padding-top: 127px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: none;
+
+        @media (min-width:992px) {
+            display: block;
+        }
+    }
+}      
+
 .principal{
-    
+    @media (min-width:992px) {
+        padding-top: 150px;
+    }
     h1{
         font-size:3rem;
         text-align: center;
