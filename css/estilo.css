@@ -5,11 +5,10 @@ html, body {
 }
 
 body {
-  background: url(https://w0.peakpx.com/wallpaper/57/269/HD-wallpaper-gradient-black-amoled-color-dark-simple.jpg);
-  background-size: cover;
+  background: url(https://cutewallpaper.org/21/dark-green-wallpaper-hd/Dark-Green-Wallpaper-HD-WallpaperSafari-in-2019-Dark-.jpg);
+  background-size: 200% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 20em;
 }
 
 .firefly {
@@ -33,15 +32,15 @@ body {
 }
 
 .firefly::before {
-  background: black;
+  background: transparent;
   opacity: 0.4;
   animation: drift ease alternate infinite;
 }
 
 .firefly::after {
-  background: rgb(111, 255, 0);
+  background: rgb(21, 80, 25);
   opacity: 0;
-  box-shadow: 0 0 0vw 0vw rgb(4, 255, 0);
+  box-shadow: 0 0 0vw 0vw rgb(68, 255, 0);
   animation: drift ease alternate infinite, flash ease infinite;
 }
 
@@ -1343,11 +1342,11 @@ body {
 @keyframes flash {
   0%, 30%, 100% {
     opacity: 0;
-    box-shadow: 0 0 0vw 0vw yellow;
+    box-shadow: 0 0 0vw 0vw rgb(80, 252, 1);
   }
   5% {
     opacity: 1;
-    box-shadow: 0 0 2vw 0.4vw yellow;
+    box-shadow: 0 0 2vw 0.4vw rgb(80, 252, 1);
   }
 }
 * {
@@ -1520,7 +1519,7 @@ footer .footer__nav p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 12%;
-    border: 5px solid black;
+    border: 2px solid rgba(12, 52, 9, 0.589);
   }
 }
 
@@ -1558,12 +1557,32 @@ footer .footer__nav p {
   font-family: "Edu NSW ACT Foundation", cursive;
   margin: 0 20px;
 }
+@media (min-width: 765px) {
+  .principal h2 {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 992px) {
+  .principal h2 {
+    font-size: 2.5rem;
+  }
+}
 .principal h3 {
   font-size: 1.2rem;
   text-align: center;
   color: rgb(255, 255, 255);
   padding: 1rem;
   font-family: "Edu NSW ACT Foundation", cursive;
+}
+@media (min-width: 765px) {
+  .principal h3 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .principal h3 {
+    font-size: 2rem;
+  }
 }
 
 .ingreso {
@@ -1580,6 +1599,9 @@ footer .footer__nav p {
   border: 1px solid green;
   background: rgba(0, 0, 0, 0.632);
   width: 100px;
+}
+.ingreso .btn-success :hover {
+  color: rgb(17, 255, 0);
 }
 .ingreso .btn-success a {
   text-decoration: none;
@@ -1615,6 +1637,19 @@ footer .footer__nav p {
   margin-bottom: 5rem;
   gap: 3rem;
   width: 300px;
+  padding-top: 5rem;
+}
+@media (min-width: 765px) {
+  .productos .imagenes__productos {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .productos .imagenes__productos {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+  }
 }
 .productos .imagenes__productos img {
   width: 100%;
@@ -1642,9 +1677,15 @@ footer .footer__nav p {
 }
 .productos .list-group {
   margin-top: 1rem;
-  flex-direction: row;
   border-radius: 0px;
   text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media (min-width: 765px) {
+  .productos .list-group {
+    flex-direction: row;
+  }
 }
 .productos .list-group .list-group-item {
   background: rgba(0, 0, 0, 0.632);
