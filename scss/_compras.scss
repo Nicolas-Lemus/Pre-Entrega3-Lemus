@@ -3,11 +3,16 @@
 }
 .buscador{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items:center;
     padding: 1rem;
         input{
             opacity: 80%;
             width: 200px;
+
+            @media (min-width:765px){
+                width: 400px;
+            }
         }
         .btn-outline-success{
             color:white;
@@ -17,13 +22,26 @@
 }
 .productos{
     .imagenes__productos{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-top: 1rem;
         margin-bottom: 5rem;
         gap: 3rem;
-        width: 300px;
-    
+
+        @media (min-width:765px){
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            gap:2rem;
+        }
+        
+        @media (min-width:992px){
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            gap:2rem;
+        }
+
         img{
             width: 100%;
             height: 250px;
@@ -31,6 +49,7 @@
         }
         .card{
             background: rgba(1, 1, 1, 0.391);
+            width: 300px;
             h5{
                 color: white;
                 font-size: 2rem;

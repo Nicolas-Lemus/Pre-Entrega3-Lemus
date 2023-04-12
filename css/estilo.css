@@ -33,7 +33,7 @@ body {
 }
 
 .firefly::before {
-  background: black;
+  background: transparent;
   opacity: 0.4;
   animation: drift ease alternate infinite;
 }
@@ -1343,11 +1343,11 @@ body {
 @keyframes flash {
   0%, 30%, 100% {
     opacity: 0;
-    box-shadow: 0 0 0vw 0vw yellow;
+    box-shadow: 0 0 0vw 0vw rgb(47, 255, 0);
   }
   5% {
     opacity: 1;
-    box-shadow: 0 0 2vw 0.4vw yellow;
+    box-shadow: 0 0 2vw 0.4vw rgb(4, 255, 0);
   }
 }
 * {
@@ -1595,12 +1595,18 @@ footer .footer__nav p {
 
 .buscador {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
 }
 .buscador input {
   opacity: 80%;
   width: 200px;
+}
+@media (min-width: 765px) {
+  .buscador input {
+    width: 400px;
+  }
 }
 .buscador .btn-outline-success {
   color: white;
@@ -1609,12 +1615,27 @@ footer .footer__nav p {
 }
 
 .productos .imagenes__productos {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   margin-bottom: 5rem;
   gap: 3rem;
-  width: 300px;
+}
+@media (min-width: 765px) {
+  .productos .imagenes__productos {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .productos .imagenes__productos {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+  }
 }
 .productos .imagenes__productos img {
   width: 100%;
@@ -1623,6 +1644,7 @@ footer .footer__nav p {
 }
 .productos .imagenes__productos .card {
   background: rgba(1, 1, 1, 0.391);
+  width: 300px;
 }
 .productos .imagenes__productos .card h5 {
   color: white;

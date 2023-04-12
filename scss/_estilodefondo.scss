@@ -29,7 +29,7 @@ html, body {
     transform-origin: -10vw;
   }
   .firefly::before {
-    background: black;
+    background: transparent;
     opacity: 0.4;
     animation: drift ease alternate infinite;
   }
@@ -1308,10 +1308,10 @@ html, body {
   @keyframes flash {
     0%, 30%, 100% {
       opacity: 0;
-      box-shadow: 0 0 0vw 0vw yellow;
+      box-shadow: 0 0 0vw 0vw rgb(47, 255, 0);
     }
     5% {
       opacity: 1;
-      box-shadow: 0 0 2vw 0.4vw yellow;
+      box-shadow: 0 0 2vw 0.4vw rgb(4, 255, 0);
     }
   }
