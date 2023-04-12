@@ -3,11 +3,10 @@ html, body {
   }
   
   body { 
-    background: url(https://w0.peakpx.com/wallpaper/57/269/HD-wallpaper-gradient-black-amoled-color-dark-simple.jpg);
-    background-size:cover;
+    background: url(https://cutewallpaper.org/21/dark-green-wallpaper-hd/Dark-Green-Wallpaper-HD-WallpaperSafari-in-2019-Dark-.jpg);
+    background-size:200% 100%;
     background-repeat:no-repeat;
     background-attachment: fixed;
-    height: 20em;
   }
   
   .firefly {
@@ -34,9 +33,9 @@ html, body {
     animation: drift ease alternate infinite;
   }
   .firefly::after {
-    background: rgb(111, 255, 0);
+    background: rgb(21, 80, 25);
     opacity: 0;
-    box-shadow: 0 0 0vw 0vw rgb(4, 255, 0);
+    box-shadow: 0 0 0vw 0vw rgb(68, 255, 0);
     animation: drift ease alternate infinite, flash ease infinite;
   }
   
@@ -1308,10 +1307,18 @@ html, body {
   @keyframes flash {
     0%, 30%, 100% {
       opacity: 0;
+<<<<<<< HEAD
       box-shadow: 0 0 0vw 0vw rgb(47, 255, 0);
     }
     5% {
       opacity: 1;
       box-shadow: 0 0 2vw 0.4vw rgb(4, 255, 0);
+=======
+      box-shadow: 0 0 0vw 0vw rgb(80, 252, 1);
+    }
+    5% {
+      opacity: 1;
+      box-shadow: 0 0 2vw 0.4vw rgb(80, 252, 1);
+>>>>>>> 02f5ee59ad706202443c568db2d6cb564372246c
     }
   }
