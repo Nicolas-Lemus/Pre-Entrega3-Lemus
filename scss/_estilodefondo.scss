@@ -1307,18 +1307,16 @@ html, body {
   @keyframes flash {
     0%, 30%, 100% {
       opacity: 0;
-<<<<<<< HEAD
       box-shadow: 0 0 0vw 0vw rgb(47, 255, 0);
     }
     5% {
       opacity: 1;
       box-shadow: 0 0 2vw 0.4vw rgb(4, 255, 0);
-=======
+
       box-shadow: 0 0 0vw 0vw rgb(80, 252, 1);
     }
     5% {
       opacity: 1;
       box-shadow: 0 0 2vw 0.4vw rgb(80, 252, 1);
->>>>>>> 02f5ee59ad706202443c568db2d6cb564372246c
     }
   }

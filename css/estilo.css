@@ -1342,19 +1342,16 @@ body {
 @keyframes flash {
   0%, 30%, 100% {
     opacity: 0;
-<<<<<<< HEAD
     box-shadow: 0 0 0vw 0vw rgb(47, 255, 0);
   }
   5% {
     opacity: 1;
     box-shadow: 0 0 2vw 0.4vw rgb(4, 255, 0);
-=======
     box-shadow: 0 0 0vw 0vw rgb(80, 252, 1);
   }
   5% {
     opacity: 1;
     box-shadow: 0 0 2vw 0.4vw rgb(80, 252, 1);
->>>>>>> 02f5ee59ad706202443c568db2d6cb564372246c
   }
 }
 * {
@@ -1652,34 +1649,19 @@ footer .footer__nav p {
   margin-top: 1rem;
   margin-bottom: 5rem;
   gap: 3rem;
-<<<<<<< HEAD
 }
 @media (min-width: 765px) {
   .productos .imagenes__productos {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 2rem;
-=======
-  width: 300px;
-  padding-top: 5rem;
-}
-@media (min-width: 765px) {
-  .productos .imagenes__productos {
-    grid-template-columns: repeat(2, 1fr);
-    width: 80%;
->>>>>>> 02f5ee59ad706202443c568db2d6cb564372246c
   }
 }
 @media (min-width: 992px) {
   .productos .imagenes__productos {
-<<<<<<< HEAD
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 2rem;
-=======
-    grid-template-columns: repeat(3, 1fr);
-    width: 80%;
->>>>>>> 02f5ee59ad706202443c568db2d6cb564372246c
   }
 }
 .productos .imagenes__productos img {
