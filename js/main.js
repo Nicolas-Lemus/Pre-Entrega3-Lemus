@@ -35,7 +35,11 @@ let nuevoProducto = new agregarProductos("Reebok", 4500, "Deportivo");
 calzados.push(nuevoProducto);
 //sin stock
 calzados.splice(5,1);
-
+//nuevo ingreso
+const nuevoIngreso=[
+    this.apellido,
+    this.cantraseña
+];
 //Comienzo de la pagina:
 alert("Bienvenid@s a TIENDA ONLINE");
 

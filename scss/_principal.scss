@@ -81,6 +81,16 @@ main{
             font-size: 2rem;
         }
     }
+    a{
+        color: white;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover{
+            color: green;
+            text-decoration: underline;
+        }
+    }
 }
 .ingreso{
     display: flex;
@@ -98,8 +108,8 @@ main{
         background: rgba(0, 0, 0, 0.632);
         width: 100px;
 
-        :hover{
-            color: rgb(17, 255, 0);
+        &:hover{
+            background: green;
         }
 
         a{

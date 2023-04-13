@@ -1,0 +1,35 @@
+
+.listado{
+    border: 3px solid green;
+    border-radius: 10px;
+    width: 80%;
+    height: 900px;
+    margin: 100px auto;
+    position: relative;
+        .botones {
+            position: absolute;
+            bottom: 0; 
+            left : 50%; 
+            transform: translateX(-50%);
+
+            .btn-success{
+                margin:1rem auto;
+                color:white;
+                border:1px solid green;
+                background: rgba(0, 0, 0, 0.632);
+                width: 100%;
+        
+                &:hover{
+                    background: green;
+                }
+        
+                a{
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .input-group-text{
+                background: rgb(192, 219, 174) ;
+            }
+        }
+}

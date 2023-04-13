@@ -17,11 +17,17 @@
         .btn-outline-success{
             color:white;
             border:1px solid green;
-            background: rgba(0, 0, 0, 0.632)
-    }
+            background: rgba(0, 0, 0, 0.632);
+
+            &:hover{
+                background:green;
+            }
+
+
+        }
 }
 .productos{
-    
+    margin-top: 4rem;
     .imagenes__productos{
         display: flex;
         flex-direction: column;
@@ -42,10 +48,11 @@
             grid-template-columns: repeat(3,auto);
             gap:2rem;
         }
-        img{
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
+
+        @media (min-width:1640px){
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            gap:2rem;
         }
         .card{
             background: rgba(1, 1, 1, 0.391);
@@ -65,6 +72,25 @@
             .btn-primary{
                 background: rgba(0, 0, 0, 0.472);
                 border: 1px solid green;
+
+                &:hover{
+                    background:green;
+                }
+            }
+            h6{
+                color: white;
+            }
+            .btn-outline-secondary{
+                color: white;
+                border: 1px solid green;
+                &:hover{
+                    background: green;
+                }
+            }
+            img{
+                width: auto;
+                height: 300px;
+                object-fit: cover;
             }
         }
     }
@@ -83,6 +109,35 @@
             background: rgba(0, 0, 0, 0.632);
             border: 1px solid green ;
             color: white;
+
+            &:hover{
+                background: green;
+                transition: .7s;
+            }
+        }
+    }
+    .salir{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        .btn-success{
+            margin: 5rem 1rem;
+            color:white;
+            border:1px solid green;
+            background: rgba(0, 0, 0, 0.632);
+            width: 150px;
+
+            &:hover{
+                background: green;
+            }
+            a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+        }
+        .input-group-text{
+            background: rgb(192, 219, 174) ;
         }
     }
 }
+
