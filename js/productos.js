@@ -23,6 +23,12 @@ calzados.push(nuevoProducto);
 //sin stock
 calzados.splice(5,1);
 
+function agregarProductos(nombre,precio,tipo){
+    this.nombre=nombre;
+    this.precio=precio;
+    this.tipo=tipo;
+}
+
 //filtro de busqueda
 const buscador=document.querySelector("#buscar");
 buscador.addEventListener("keyup" , e => {
@@ -103,5 +109,3 @@ productosTalles.forEach(producto => {
         contadorCarrito.textContent = cantidadProductos;
     });
 });
-
-

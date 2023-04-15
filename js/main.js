@@ -102,11 +102,7 @@ function confirmarCompras() {
     }
 }
 //funcion agregar producto mediante this
-function agregarProductos(nombre,precio,tipo){
-    this.nombre=nombre;
-    this.precio=precio;
-    this.tipo=tipo;
-}
+
 
 /// INICIO DE SECCION 
 const formInicio = document.querySelector('#formularioInicio'),
