@@ -1,9 +1,4 @@
-/*Acortamos un poco el codigo, sumamos filtado de "tipo" de calzado y un filtrado de precio maximo a buscar.
-Tambien sumamos una variable carrito para acumular los objetos seleccionados,y adaptamos el proceso de compra a la variable carrito.
-codigo puede mejorar su logica y funcionalidad(ejemplo: cocatenar variable de talles e colores), conte con poco tiempo pido disculpas!!!*/
 
-const suUsuario = "Lemus";
-const suTarjeta = 1234567;
 let ingreso = false;
 let carrito = [];
 //lista de productos
@@ -28,7 +23,6 @@ const calzados = [
 ];
 //talles
 const talles=[40,41,42,43,44];
-
 //agregamos producto nuevo
 let nuevoProducto = new agregarProductos("Reebok", 4500, "Deportivo");
 //agregamos la variable a Calzados
@@ -37,40 +31,9 @@ calzados.push(nuevoProducto);
 calzados.splice(5,1);
 //nuevo ingreso
 const nuevoIngreso=[
-    this.apellido,
-    this.cantraseña
+    this.nuevoApellido,
+    this.nuevaTarjeta
 ];
-//Comienzo de la pagina:
-alert("Bienvenid@s a TIENDA ONLINE");
-
-let saldo;
-while (true) {
-    let apellido = prompt("Ingrese su Apellido");
-        if (apellido === suUsuario){
-            let saldo = 40000;
-            alert("Bienvenido " + apellido);
-            for (let i = 2; i >= 0; i--) {
-                let tarjeta = parseFloat(prompt("Ingrese su numero de tarjeta. Tiene " + (i + 1) + " oportunidades."));
-                if (tarjeta === suTarjeta) {
-                alert("Ingreso con exito.");
-                alert("Su saldo actual es " + "$" + saldo);
-                ingreso = true;
-                break;
-                } else {
-                    alert("Tarjeta incorrecta. Reintente.");
-                }
-            }
-        } else {
-            alert("Apellido de usuario no reconocido");
-        }
-        if (ingreso) {
-        ingresoExitoso();
-        break;
-    //pausamos la funcion asi no queda el ingreso guardado.
-        } else {
-        alert("No se pudo acceder a su cuenta.");
-        }
-}
 //funcion ingreso
 function ingresoExitoso() {
     let tipoCalzado = prompt("Ingrese el tipo de calzado que busca:\n1. Deportivo\n2. Casual\n3. Formal \n4. Cancelar compras \n5. Carrito \n6. Salir ");
@@ -80,7 +43,7 @@ if (tipoCalzado === "1" || tipoCalzado === "2" || tipoCalzado === "3") {
 
     switch (tipoCalzado) {
         case "1":
-            let deportivos = calzados.filter(calzado => calzado.tipo === "Deportivo" && calzado.precio <= precioMax);
+            let busqueda = calzados.filter(calzado => calzado.precio);
             agregarAlCarrito(deportivos);
             ingresoExitoso();
         break;
@@ -223,3 +186,28 @@ function agregarProductos(nombre,precio,tipo){
     this.precio=precio;
     this.tipo=tipo;
 }
+
+/// INICIO DE SECCION 
+const formInicio = document.querySelector('#formularioInicio'),
+    apellidoInput = document.querySelector('#apellido'),
+    tarjetaInput = document.querySelector('#tarjeta'),
+    alertaInicio = document.querySelector('#alertaInicio'),
+    enviar = document.querySelector("#botonregistrar");
+
+formInicio.addEventListener('submit',function(e){
+    e.preventDefault();
+    const apellido = apellidoInput.value;
+    const tarjeta = tarjetaInput.value;
+        if (!apellido || !tarjeta) {
+            alertaInicio.innerHTML = 'Ingrese el apellido y la tarjeta';
+            return;
+        }
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioExistente = usuariosRegistrados.find(usuario => usuario.apellido === apellido && usuario.tarjeta === tarjeta);
+    if (!usuarioExistente) {
+        alertaInicio.innerHTML = 'Usuario no registrado';
+        return;
+    }else{
+        window.location.href = "pages/compras.html";
+    }
+});

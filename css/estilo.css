@@ -1630,6 +1630,11 @@ footer .footer__nav p {
 .ingreso .input-group-text {
   background: rgb(192, 219, 174);
 }
+.ingreso #alertaRegistro, .ingreso #alertaInicio {
+  color: white;
+  font-family: 1rem;
+  margin: 1rem auto;
+}
 
 .ventas {
   padding-top: 10rem;
@@ -1650,13 +1655,21 @@ footer .footer__nav p {
     width: 400px;
   }
 }
-.buscador .btn-outline-success {
-  color: white;
-  border: 1px solid green;
-  background: rgba(0, 0, 0, 0.632);
+
+.buscarPrecio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
-.buscador .btn-outline-success:hover {
-  background: green;
+.buscarPrecio input {
+  opacity: 80%;
+  width: 200px;
+}
+@media (min-width: 765px) {
+  .buscarPrecio input {
+    width: 400px;
+  }
 }
 
 .productos {
@@ -1726,7 +1739,7 @@ footer .footer__nav p {
   background: green;
 }
 .productos .imagenes__productos .card img {
-  width: auto;
+  width: 300px;
   height: 300px;
   object-fit: cover;
 }
@@ -1772,6 +1785,10 @@ footer .footer__nav p {
 }
 .productos .salir .input-group-text {
   background: rgb(192, 219, 174);
+}
+
+.filtro {
+  display: none;
 }
 
 .listado {

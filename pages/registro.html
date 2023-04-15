@@ -27,7 +27,7 @@
                             <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Informacion</a>
+                            <a class="nav-link" href="registro.html">Registrar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="compras.html">Catalogo</a>
@@ -85,34 +85,31 @@
         <h1>Bienvenid@s a Fashion Tienda</h1>
         <h2>Registarar usuario</h2>
         <h3>¡Gracias por formar parte de esta comunidad!</h3>
-        <div class="ingreso">
-            <div class="input-group mb-3">
-                <span class="input-group-text">Apellido</span>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGroup3" placeholder="Apellido">
-                    <label for="floatingInputGroup1">Ingrese su Apellido</label>
+        <form id="registroNuevo">
+            <div class="ingreso">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Apellido</span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="apellidoNuevo" placeholder="Apellido">
+                        <label for="floatingInputGroup1">Ingrese su Apellido</label>
+                    </div>
                 </div>
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">Tarjeta</span>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="floatingInputGroup4" placeholder="Username" maxlength="7">
-                    <label for="floatingInputGroup1">Ingrese su tarjeta</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Tarjeta</span>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="tarjetaNueva" placeholder="Username" maxlength="7">
+                        <label for="floatingInputGroup1">Ingrese su tarjeta</label>
+                    </div>
                 </div>
+                <button type="submit" class="btn btn-success">Registrar</button>
+                <p id="alertaRegistro"></p>
+                <a href="../index.html">Ir al inicio</a>
             </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">Clave</span>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingInputGroup5" placeholder="Username">
-                    <label for="floatingInputGroup1">Ingrese Clave de Seguridad</label>
-                </div>
-            </div>
-            <input type="submit" value="Registrar" class="btn btn-success">
-        </div>
+        </form>
     </section>
 </div>
-<div class="parte-2">
-    <img src="https://onpointfresh.com/wp-content/uploads/2016/03/vXRXJvG.jpg" alt="paginadeinicio">
+<div class="parte-2">   
+    <img src= "https://onpointfresh.com/wp-content/uploads/2016/03/vXRXJvG.jpg" alt="paginadeinicio">
 </div>
 </main>
     <footer>
@@ -161,7 +158,7 @@
         <h6>Todos los derechos reservados</h6>
         <h6>1994-2023</h6>
     </footer>
-    <!-- <script src="./js/main.js"></script> -->
+    <script src="../js/registro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
