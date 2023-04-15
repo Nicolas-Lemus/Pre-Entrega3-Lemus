@@ -16,8 +16,9 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid navbar-principal">
                 <div>
-                    <a class="navbar-brand" href="../index.html"><img src="../multimedia/letra-verde-f-de-fuente-plastico-brillante-colores-blanco-y-amarillo-aislados-en-color-negro-ilustracion-d-simbolos-156693125.webp" alt="Logotipo"></a>
-                    <span id="valorCarrito"><a href="carrito.html"><img src="../multimedia/icons8-carrito-de-compras-80.webp" alt="carrito" value="0"></a>0</span>
+                    <a class="navbar-brand" href="../index.html"><img src="../multimedia/letra-verde-f-de-fuente-plastico-brillante-colores-blanco-y-amarillo-aislados-en-color-negro-ilustracion-d-simbolos-156693125.webp" alt="Logotipo"></a></span>
+                    <span id="carritoImage"><a href="carrito.html"><img src="../multimedia/icons8-carrito-de-compras-80.webp" alt="carrito" value="0"></a>
+                    <span id="valorCarrito"><p>0</p></span>
                 </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -59,6 +60,14 @@
     <section class="ventas principal">
         <h1>Productos</h1>
         <h2>Listado de productos disponibles a la venta</h2>
+        <section class="ProductosCarrito">
+            <div class="listado">
+                <div class="botones">
+                    <input type="submit" value="Comprar" class="btn btn-success" id="confirmarCompra">
+                    <input type="submit" value="Cancelar compras" class="btn btn-success" id="cancelarCompra">
+                </div>
+            </div>
+        </section>
     </section>
     <div class="buscador">
         <form class="d-flex" role="search">
@@ -83,7 +92,7 @@
                     <h5 class="card-title">Nike</h5>
                     <p class="card-text">Precio: $4000</p>
                     <h6>Talles:</h6>
-                    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups" id="talle-buttons" >
                         <div class="btn-group me-2" role="group" aria-label="First group">
                             <button type="button" class="btn btn-outline-secondary">40</button>
                             <button type="button" class="btn btn-outline-secondary">41</button>
@@ -92,7 +101,7 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    <a href="#" class="btn btn-primary" id="listado" >Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-2">

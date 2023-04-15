@@ -2,8 +2,8 @@
 .listado{
     border: 3px solid green;
     border-radius: 10px;
-    width: 80%;
-    height: 900px;
+    width: 70%;
+    height: 500px;
     margin: 100px auto;
     position: relative;
         .botones {
@@ -13,7 +13,7 @@
             transform: translateX(-50%);
 
             .btn-success{
-                margin:1rem auto;
+                margin:.2rem auto;
                 color:white;
                 border:1px solid green;
                 background: rgba(0, 0, 0, 0.632);
@@ -32,4 +32,19 @@
                 background: rgb(192, 219, 174) ;
             }
         }
+}
+.producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    margin: 1rem;
+    font-size: 1rem;
+}
+.producto-carrito .nombre {
+    font-weight: bold;
+}
+.producto-carrito .precio {
+    margin-left: auto;
 }

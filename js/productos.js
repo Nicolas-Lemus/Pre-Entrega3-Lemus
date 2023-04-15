@@ -17,6 +17,11 @@ const calzados = [
     {nombre: "Oxford", precio: 6199, tipo:"Formal"},
     {nombre: "Gaziano & Girling", precio: 10000, tipo:"Formal"}
 ];
+let nuevoProducto = new agregarProductos("Reebok", 4500, "Deportivo");
+//agregamos la variable a Calzados
+calzados.push(nuevoProducto);
+//sin stock
+calzados.splice(5,1);
 
 //filtro de busqueda
 const buscador=document.querySelector("#buscar");
@@ -49,4 +54,54 @@ inputPrecioMaximo.addEventListener('input', function() {
     const precioMaximo = parseInt(this.value);
     filtrarPorPrecio(precioMaximo);
 });
+
+//talles
+
+const talles = [40, 41, 42, 43, 44];
+const productosTalles = document.querySelectorAll('.card');
+const carrito = document.querySelector('.listado');
+const contadorCarrito = document.querySelector('#valorCarrito');
+
+let cantidadProductos = 0;
+
+productosTalles.forEach(producto => {
+    const nombreProducto = producto.querySelector('.card-title').textContent;
+    const precioProducto = producto.querySelector('.card-text').textContent;
+    const botonesTalles = producto.querySelectorAll('.btn-outline-secondary');
+
+    let talleSeleccionado;
+
+    botonesTalles.forEach(botonTalle => {
+        botonTalle.addEventListener('click', () => {
+            botonesTalles.forEach(boton => {
+                boton.classList.remove('seleccionado');
+            });
+            botonTalle.classList.add('seleccionado');
+            talleSeleccionado = botonTalle.textContent;
+        });
+    });
+
+    const botonTarjeta = producto.querySelector('.btn-primary');
+    botonTarjeta.addEventListener('click', () => {
+        if (!talleSeleccionado) {
+            return;
+        }
+        const productoSeleccionado = `${nombreProducto} - ${precioProducto} - Talle ${talleSeleccionado}`;
+        const li = document.createElement('li');
+        li.classList.add('producto-carrito');
+        li.innerHTML = `
+        <span class="nombre">${nombreProducto}</span>
+        <span>Talle ${talleSeleccionado}</span>
+        <span class="precio">${precioProducto}</span>
+        `;
+        carrito.appendChild(li);
+        talleSeleccionado = null;
+        botonesTalles.forEach(boton => {
+            boton.classList.remove('seleccionado');
+        });
+        cantidadProductos++;
+        contadorCarrito.textContent = cantidadProductos;
+    });
+});
+
 

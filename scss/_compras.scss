@@ -146,4 +146,20 @@
 .filtro{
     display: none;
 }
-
+.seleccionado{
+    background: rgb(22, 85, 41);
+}
+#valorCarrito{
+    position: relative;
+    p{
+        position: absolute;
+        top: 0px;
+        left:5px;
+    }
+}
+#carritoImage{
+    img{
+        width: 50px;
+    }
+    
+}
