@@ -60,13 +60,13 @@ inputPrecioMaximo.addEventListener('input', function() {
     const precioMaximo = parseInt(this.value);
     filtrarPorPrecio(precioMaximo);
 });
-
 //talles
 
 const talles = [40, 41, 42, 43, 44];
 const productosTalles = document.querySelectorAll('.card');
 const carrito = document.querySelector('.listado');
 const contadorCarrito = document.querySelector('#valorCarrito');
+const carritoCompras = JSON.parse(localStorage.getItem('carrito')) || [];
 
 let cantidadProductos = 0;
 
@@ -93,6 +93,8 @@ productosTalles.forEach(producto => {
             return;
         }
         const productoSeleccionado = `${nombreProducto} - ${precioProducto} - Talle ${talleSeleccionado}`;
+        carritoCompras.push(productoSeleccionado);
+        localStorage.setItem('carrito', JSON.stringify(carritoCompras));
         const li = document.createElement('li');
         li.classList.add('producto-carrito');
         li.innerHTML = `

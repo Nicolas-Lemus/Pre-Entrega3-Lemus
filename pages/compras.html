@@ -17,7 +17,7 @@
             <div class="container-fluid navbar-principal">
                 <div>
                     <a class="navbar-brand" href="../index.html"><img src="../multimedia/letra-verde-f-de-fuente-plastico-brillante-colores-blanco-y-amarillo-aislados-en-color-negro-ilustracion-d-simbolos-156693125.webp" alt="Logotipo"></a></span>
-                    <span id="carritoImage"><a href="carrito.html"><img src="../multimedia/icons8-carrito-de-compras-80.webp" alt="carrito" value="0"></a>
+                    <span id="carritoImage"><img src="../multimedia/icons8-carrito-de-compras-80.webp" alt="carrito" value="0">
                     <span id="valorCarrito"><p>0</p></span>
                 </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,21 +60,6 @@
     <section class="ventas principal">
         <h1>Productos</h1>
         <h2>Listado de productos disponibles a la venta</h2>
-        <section class="ProductosCarrito">
-            <div class="listado">
-                <div class="secciones__Listado">
-                    <div class="secciones__Producto">
-                        <h3>Producto:</h3>
-                        <h3>Talles:</h3>
-                    </div>
-                    <h3>Precio $</h3>
-                </div>
-                <div class="botones">
-                    <input type="submit" value="Comprar" class="btn btn-success" id="confirmarCompra">
-                    <input type="submit" value="Cancelar compras" class="btn btn-success" id="cancelarCompra">
-                </div>
-            </div>
-        </section>
     </section>
     <div class="buscador">
         <form class="d-flex" role="search">
@@ -94,7 +79,7 @@
         </div>
         <div class="imagenes__productos container-fluid">
             <div class="card"id="list-item-1">
-                <img src="../multimedia/nike_.webp" class="card-img-top" alt="championesnike">
+                <img src="../multimedia/nike.webp" class="card-img-top" alt="championesnike">
                 <div class="card-body">
                     <h5 class="card-title">Nike</h5>
                     <p class="card-text">Precio: $4000</p>
@@ -364,10 +349,26 @@
                 </div>
             </div>
         </div>
-        <div class="salir">
+        <section class="ProductosCarrito">
+            <h3>Carrito de compras</h3>
+            <div class="listado carrito">
+                <div class="secciones__Listado">
+                    <div class="secciones__Producto">
+                        <h3>Producto:</h3>
+                        <h3>Talles:</h3>
+                    </div>
+                    <h3>Precio $</h3>
+                </div>
+                <div class="botones">
+                    <input type="submit" value="Comprar" class="btn btn-success" id="confirmarCompra">
+                    <input type="submit" value="Cancelar compras" class="btn btn-success" id="cancelarCompra">
+                </div>
+            </div>
+        </section>
+       <!--  <div class="salir">
             <input type="submit" value="Salir" class="btn btn-success" id="salir">
             <input type="submit" value="Cancelar compra" class="btn btn-success" id="cancelarCompra">
-        </div>
+        </div> -->
     </section>
     <footer>
         <div class="description">
