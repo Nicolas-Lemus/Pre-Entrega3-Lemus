@@ -1839,23 +1839,38 @@ footer .footer__nav p {
 .listado .botones .input-group-text {
   background: rgb(192, 219, 174);
 }
+.listado .secciones__Listado {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.listado .secciones__Listado h3 {
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.listado .secciones__Listado .secciones__Producto {
+  display: flex;
+  flex-direction: row;
+}
 
 .producto-carrito {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #03f507;
   color: white;
   margin: 1rem;
   font-size: 1rem;
 }
-
 .producto-carrito .nombre {
   font-weight: bold;
+  margin-right: 1rem;
+  font-size: 1rem;
 }
-
 .producto-carrito .precio {
   margin-left: auto;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=estilo.css.map */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Productos || Fashion Tienda</title>
+    <title>Pagina de Catalogo || Fashion Tienda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilo.css">
     <meta name="description" content="">
@@ -16,9 +16,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid navbar-principal">
                 <div>
-                    <a class="navbar-brand" href="../index.html"><img src="../multimedia/letra-verde-f-de-fuente-plastico-brillante-colores-blanco-y-amarillo-aislados-en-color-negro-ilustracion-d-simbolos-156693125.webp" alt="Logotipo"></a></span>
-                    <span id="carritoImage"><a href="carrito.html"><img src="../multimedia/icons8-carrito-de-compras-80.webp" alt="carrito" value="0"></a>
-                    <span id="valorCarrito"><p>0</p></span>
+                    <a class="navbar-brand" href="../index.html"><img src="../multimedia/letra-verde-f-de-fuente-plastico-brillante-colores-blanco-y-amarillo-aislados-en-color-negro-ilustracion-d-simbolos-156693125.webp" alt="Logotipo"></a>
                 </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -32,7 +30,7 @@
                             <a class="nav-link" href="registro.html">Registrar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="compras.html">Catalogo</a>
+                            <a class="nav-link active" href="catalogo.html">Catalogo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contactos">Contactos</a>
@@ -58,23 +56,8 @@
     <div class="firefly"></div>
     <div class="firefly"></div>
     <section class="ventas principal">
-        <h1>Productos</h1>
-        <h2>Listado de productos disponibles a la venta</h2>
-        <section class="ProductosCarrito">
-            <div class="listado">
-                <div class="secciones__Listado">
-                    <div class="secciones__Producto">
-                        <h3>Producto:</h3>
-                        <h3>Talles:</h3>
-                    </div>
-                    <h3>Precio $</h3>
-                </div>
-                <div class="botones">
-                    <input type="submit" value="Comprar" class="btn btn-success" id="confirmarCompra">
-                    <input type="submit" value="Cancelar compras" class="btn btn-success" id="cancelarCompra">
-                </div>
-            </div>
-        </section>
+        <h1>Catalogo</h1>
+        <h2>Productos disponibles</h2>
     </section>
     <div class="buscador">
         <form class="d-flex" role="search">
@@ -99,24 +82,6 @@
                     <h5 class="card-title">Nike</h5>
                     <p class="card-text">Precio: $4000</p>
                     <h6>Talles:</h6>
-                    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups" id="talle-buttons" >
-                        <div class="btn-group me-2" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-outline-secondary">40</button>
-                            <button type="button" class="btn btn-outline-secondary">41</button>
-                            <button type="button" class="btn btn-outline-secondary">42</button>
-                            <button type="button" class="btn btn-outline-secondary">43</button>
-                            <button type="button" class="btn btn-outline-secondary">44</button>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-primary" id="listado" >Agregar al carrito</a>
-                </div>
-            </div>
-            <div class="card" id="list-item-2">
-                <img src="../multimedia/pexels-photo-1456721.webp" class="card-img-top" alt="adidas">
-                <div class="card-body">
-                    <h5 class="card-title">Adidas</h5>
-                    <p class="card-text">Precio: $3900</p>
-                    <h6>Talles:</h6>
                     <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group me-2" role="group" aria-label="First group">
                             <button type="button" class="btn btn-outline-secondary">40</button>
@@ -126,7 +91,23 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary ">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="card" id="list-item-2">
+                <img src="../multimedia/pexels-photo-1456721.webp" class="card-img-top" alt="adidas">
+                <div class="card-body">
+                    <h5 class="card-title">Adidas</h5>
+                    <p class="card-text">Precio: $3900</p>
+                    <h6>Talles:</h6>
+                    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups" id="talle-buttons">
+                        <div class="btn-group me-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-outline-secondary">40</button>
+                            <button type="button" class="btn btn-outline-secondary">41</button>
+                            <button type="button" class="btn btn-outline-secondary">42</button>
+                            <button type="button" class="btn btn-outline-secondary">43</button>
+                            <button type="button" class="btn btn-outline-secondary">44</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card" id="list-item-3">
@@ -144,7 +125,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-4">
@@ -162,7 +142,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-5">
@@ -180,7 +159,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-6">
@@ -198,7 +176,6 @@
                             <button type="button" class="btn btn-outline-secondary" id="talle44">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-7">
@@ -216,7 +193,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-8">
@@ -234,7 +210,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-9">
@@ -252,7 +227,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-10">
@@ -270,7 +244,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-11">
@@ -288,7 +261,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-12">
@@ -306,7 +278,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-13">
@@ -324,7 +295,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-14">
@@ -342,7 +312,6 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
             <div class="card" id="list-item-15">
@@ -360,13 +329,8 @@
                             <button type="button" class="btn btn-outline-secondary">44</button>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
                 </div>
             </div>
-        </div>
-        <div class="salir">
-            <input type="submit" value="Salir" class="btn btn-success" id="salir">
-            <input type="submit" value="Cancelar compra" class="btn btn-success" id="cancelarCompra">
         </div>
     </section>
     <footer>
@@ -416,7 +380,6 @@
         <h6>1994-2023</h6>
     </footer>
     <script src="../js/productos.js"></script>
-    <!-- <script src="../js/productos.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
