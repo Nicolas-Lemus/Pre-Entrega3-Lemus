@@ -159,6 +159,10 @@
 }
 #carritoImage{
     img{
-        width: 50px;
+        width: 30px;
+
+        @media (min-width:765px) {
+            width: 50px;
+        }
     }
 }

@@ -1395,7 +1395,7 @@ header .navbar-nav .nav-link.active, header .navbar-nav .show .nav-link {
   color: rgb(0, 253, 59);
 }
 header img {
-  width: 100px;
+  width: 80px;
 }
 
 footer {
@@ -1507,7 +1507,7 @@ footer .footer__nav p {
 }
 
 .carrusel {
-  padding-top: 127px;
+  padding-top: 112px;
 }
 @media (min-width: 992px) {
   .carrusel {
@@ -1805,7 +1805,12 @@ footer .footer__nav p {
 }
 
 #carritoImage img {
-  width: 50px;
+  width: 30px;
+}
+@media (min-width: 765px) {
+  #carritoImage img {
+    width: 50px;
+  }
 }
 
 .listado {
