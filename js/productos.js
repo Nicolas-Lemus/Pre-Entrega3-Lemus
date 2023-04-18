@@ -95,12 +95,12 @@ productosTalles.forEach(producto => {
         const productoSeleccionado = `${nombreProducto} - ${precioProducto} - Talle ${talleSeleccionado}`;
         carritoCompras.push(productoSeleccionado);
         localStorage.setItem('carrito', JSON.stringify(carritoCompras));
-        const li = document.createElement('li');
+        const li = document.createElement("li");
         li.classList.add('producto-carrito');
         li.innerHTML = `
-        <span class="nombre">${nombreProducto}</span>
-        <span>Talle ${talleSeleccionado}</span>
-        <span class="precio">${precioProducto}</span>
+            <span class="nombre">${nombreProducto}</span>
+            <span>Talle ${talleSeleccionado}</span>
+            <span class="precio">${precioProducto}</span>
         `;
         carrito.appendChild(li);
         talleSeleccionado = null;
