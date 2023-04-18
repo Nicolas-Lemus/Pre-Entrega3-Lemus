@@ -62,13 +62,16 @@ inputPrecioMaximo.addEventListener('input', function() {
 });
 //talles
 
-const talles = [40, 41, 42, 43, 44];
+
+/* const talles = [40, 41, 42, 43, 44];
 const productosTalles = document.querySelectorAll('.card');
 const carrito = document.querySelector('.listado');
 const contadorCarrito = document.querySelector('#valorCarrito');
 const carritoCompras = JSON.parse(localStorage.getItem('carrito')) || [];
 
 let cantidadProductos = 0;
+let totalCarrito = 0;
+let divTotalCarrito = document.getElementById("totalCarrito");
 
 productosTalles.forEach(producto => {
     const nombreProducto = producto.querySelector('.card-title').textContent;
@@ -95,12 +98,13 @@ productosTalles.forEach(producto => {
         const productoSeleccionado = `${nombreProducto} - ${precioProducto} - Talle ${talleSeleccionado}`;
         carritoCompras.push(productoSeleccionado);
         localStorage.setItem('carrito', JSON.stringify(carritoCompras));
-        const li = document.createElement("li");
+        const li = document.createElement('li');
         li.classList.add('producto-carrito');
         li.innerHTML = `
-            <span class="nombre">${nombreProducto}</span>
-            <span>Talle ${talleSeleccionado}</span>
-            <span class="precio">${precioProducto}</span>
+        <span class="nombre">${nombreProducto}</span>
+        <span>Talle ${talleSeleccionado}</span>
+        <span class="precio">${precioProducto}</span>
+        <button class="eliminar-producto">X</button>
         `;
         carrito.appendChild(li);
         talleSeleccionado = null;
@@ -109,5 +113,150 @@ productosTalles.forEach(producto => {
         });
         cantidadProductos++;
         contadorCarrito.textContent = cantidadProductos;
+
+        const precioProductoNumerico = parseFloat(precioProducto); 
+        totalCarrito += precioProductoNumerico;
+        divTotalCarrito.innerHTML = `Total: ${totalCarrito.toFixed(2)}`;
     });
 });
+carrito.addEventListener('click', (event) => {
+    if (event.target.classList.contains('eliminar-producto')) {
+        const productoAEliminar = event.target.parentNode;
+        const nombreProductoAEliminar = productoAEliminar.querySelector('.nombre').textContent;
+        const precioProductoAEliminar = productoAEliminar.querySelector('.precio').textContent;
+        const precioProductoAEliminarNumerico = parseFloat(precioProductoAEliminar);
+        const indiceProductoAEliminar = carritoCompras.findIndex(producto => producto.includes(nombreProductoAEliminar) && producto.includes(precioProductoAEliminar));
+        if (indiceProductoAEliminar !== -1) {
+            carritoCompras.splice(indiceProductoAEliminar, 1);
+            localStorage.setItem('carrito', JSON.stringify(carritoCompras));
+            productoAEliminar.remove();
+            cantidadProductos--;
+            contadorCarrito.textContent = cantidadProductos;
+            // Calcular el precio total del carrito a partir de los productos restantes
+            let totalCarritoActual = totalCarrito;
+            carritoCompras.forEach(producto => {
+                const precioProducto = producto.split(' - ')[1];
+                const precioNumerico = parseFloat(precioProducto);
+                if (!isNaN(precioNumerico)) {
+                    totalCarritoActual += precioNumerico;
+                }
+            });
+            totalCarrito = totalCarritoActual;
+            const divTotalCarrito = document.getElementById("totalCarrito");
+            divTotalCarrito.innerHTML = `Total: ${totalCarrito.toFixed(2)}`;
+        }
+    }
+});
+if (carritoCompras.length > 0) {
+    carritoCompras.forEach(producto => {
+        const li = document.createElement('li');
+        li.classList.add('producto-carrito');
+        li.innerHTML = `
+            <span class="nombre">${producto.split(' - ')[0]}</span>
+            <span>${producto.split(' - ')[2]}</span>
+            <span class="precio">${producto.split(' - ')[1]}</span>
+            <button class="eliminar-producto">X</button>
+        `;
+        carrito.appendChild(li);
+        cantidadProductos++;
+        contadorCarrito.textContent = cantidadProductos;
+        const precioProductoNumerico = parseFloat(precioProducto.split(' - ')[1]); 
+        totalCarrito += precioProductoNumerico;
+    });
+    divTotalCarrito.innerHTML = `Total: ${totalCarrito.toFixed(2)}`; 
+} */
+const talles = [40, 41, 42, 43, 44];
+const productosTalles = document.querySelectorAll('.card');
+const carrito = document.querySelector('.listado');
+const contadorCarrito = document.querySelector('#valorCarrito');
+const carritoCompras = JSON.parse(localStorage.getItem('carrito')) || [];
+const divTotalCarrito = document.getElementById("totalCarrito");
+
+let cantidadProductos = 0;
+let totalCarrito = 0;
+
+
+function agregarProductoAlCarrito(nombreProducto, precioProducto, talleSeleccionado) {
+    const productoSeleccionado = `${nombreProducto} - ${precioProducto} - Talle ${talleSeleccionado}`;
+    carritoCompras.push(productoSeleccionado);
+    localStorage.setItem('carrito', JSON.stringify(carritoCompras));
+    const li = document.createElement('li');
+    li.classList.add('producto-carrito');
+    li.innerHTML = `
+        <span class="nombre">${nombreProducto}</span>
+        <span>Talle ${talleSeleccionado}</span>
+        <span class="precio">${precioProducto}</span>
+        <button class="eliminar-producto">X</button>
+    `;
+    carrito.appendChild(li);
+    cantidadProductos++;
+    contadorCarrito.textContent = cantidadProductos;
+    const precioProductoNumerico = parseFloat(precioProducto); 
+    totalCarrito += precioProductoNumerico;
+    divTotalCarrito.innerHTML = `Total: ${totalCarrito.toFixed(2)}`;
+}
+
+productosTalles.forEach(producto => {
+    const nombreProducto = producto.querySelector('.card-title').textContent;
+    const precioProducto = producto.querySelector('.card-text').textContent;
+    const botonesTalles = producto.querySelectorAll('.btn-outline-secondary');
+
+    let talleSeleccionado;
+
+    botonesTalles.forEach(botonTalle => {
+        botonTalle.addEventListener('click', () => {
+            botonesTalles.forEach(boton => {
+                boton.classList.remove('seleccionado');
+            });
+            botonTalle.classList.add('seleccionado');
+            talleSeleccionado = botonTalle.textContent;
+        });
+    });
+
+    const botonTarjeta = producto.querySelector('.btn-primary');
+    botonTarjeta.addEventListener('click', () => {
+        if (!talleSeleccionado) {
+            return;
+        }
+        agregarProductoAlCarrito(nombreProducto, precioProducto, talleSeleccionado);
+        talleSeleccionado = null;
+        botonesTalles.forEach(boton => {
+            boton.classList.remove('seleccionado');
+        });
+    });
+});
+
+carrito.addEventListener('click', (event) => {
+    if (event.target.classList.contains('eliminar-producto')) {
+        const productoAEliminar = event.target.parentNode;
+        const nombreProductoAEliminar = productoAEliminar.querySelector('.nombre').textContent;
+        const precioProductoAEliminar = productoAEliminar.querySelector('.precio').textContent;
+        const precioProductoAEliminarNumerico = parseFloat(precioProductoAEliminar);
+        const indiceProductoAEliminar = carritoCompras.findIndex(producto => producto.includes(nombreProductoAEliminar) && producto.includes(precioProductoAEliminar));
+        if (indiceProductoAEliminar !== -1) {
+            carritoCompras.splice(indiceProductoAEliminar, 1);
+            localStorage.setItem('carrito', JSON.stringify(carritoCompras));
+            productoAEliminar.remove();
+            cantidadProductos--;
+            contadorCarrito.textContent = cantidadProductos;
+            // Calcular el precio total del carrito a partir de los productos restantes
+            let totalCarritoActual = totalCarrito;
+            carritoCompras.forEach(producto => {
+                const precioProducto = producto.split(' - ')[1];
+                const precioNumerico = parseFloat(precioProducto);
+                if (!isNaN(precioNumerico)) {
+                    totalCarritoActual += precioNumerico;
+                }
+            });
+            totalCarrito = totalCarritoActual;
+            const divTotalCarrito = document.querySelector("#totalCarrito");
+            divTotalCarrito.innerHTML = `Total: ${totalCarrito.toFixed(2)}`;
+        }
+    }
+});
+
+
+
+
+
+
