@@ -17,8 +17,8 @@
             <div class="container-fluid navbar-principal">
                 <div>
                     <a class="navbar-brand" href="../index.html"><img src="../multimedia/letra-verde-f-de-fuente-plastico-brillante-colores-blanco-y-amarillo-aislados-en-color-negro-ilustracion-d-simbolos-156693125.webp" alt="Logotipo"></a></span>
-                    <span id="carritoImage"><img src="../multimedia/icons8-carrito-de-compras-80.webp" alt="carrito" value="0">
-                    <span id="valorCarrito"><p>0</p></span>
+                    <span id="carritoImage"><a href="#carprod"><img src="../multimedia/icons8-carrito-de-compras-80.webp" alt="carrito" value="0"></a>
+                    <span id="valorCarrito"><p></p></span>
                 </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -349,24 +349,19 @@
                 </div>
             </div>
         </div>
-        <section class="ProductosCarrito">
-            <h3>Carrito de compras</h3>
-            <div class="listado carrito">
-                <div class="secciones__Listado">
-                    <div class="secciones__Producto">
-                        <h3>Producto:</h3>
-                        <h3>Talles:</h3>
-                    </div>
-                    <h3>Precio $</h3>
-                </div>
-                <div id="totalCarrito"></div>
-                <div class="botones">
-                    <input type="submit" value="Comprar" class="btn btn-success" id="confirmarCompra">
-                    <input type="submit" value="Cancelar compras" class="btn btn-success" id="cancelarCompra">
-                </div>
-            </div>
-        </section>
-    </section>
+    </section >
+    <div class="ProductosCarrito">
+        <div class="ProductosCarrito">
+            <h2>Carrito de compras</h2>
+        </div>
+        <div class="listado">
+        </div>
+        <div class="botones">
+            <div id="precioTotal"></div>
+            <input type="submit" value="Comprar" class="btn btn-success" id="confirmarCompra">
+            <input type="submit" value="Cancelar compras" class="btn btn-success" id="cancelarCompra">
+        </div>
+    </div>
     <footer>
         <div class="description">
             <a class="navbar-brand" href="../index.html"><img src="../multimedia/letra-verde-f-de-fuente-plastico-brillante-colores-blanco-y-amarillo-aislados-en-color-negro-ilustracion-d-simbolos-156693125.webp" alt="Logotipo" width="60px"></a>

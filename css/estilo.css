@@ -1819,48 +1819,6 @@ footer .footer__nav p {
   width: 70%;
   height: 500px;
   margin: 100px auto;
-  position: relative;
-}
-.listado .botones {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.listado .botones .btn-success {
-  margin: 0.2rem auto;
-  color: white;
-  border: 1px solid green;
-  background: rgba(0, 0, 0, 0.632);
-  width: 100%;
-}
-.listado .botones .btn-success:hover {
-  background: green;
-}
-.listado .botones .btn-success a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-.listado .botones .input-group-text {
-  background: rgb(192, 219, 174);
-}
-.listado .secciones__Listado {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.listado .secciones__Listado h3 {
-  color: white;
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  padding: 0.5rem;
-}
-.listado .secciones__Listado .secciones__Producto {
-  display: flex;
-  flex-direction: row;
-}
-.listado .secciones__Listado .element.style {
-  background: red;
 }
 
 .ProductosCarrito {
@@ -1868,14 +1826,6 @@ footer .footer__nav p {
   color: white;
   font-size: 1rem;
   list-style: none;
-}
-.ProductosCarrito h3 {
-  font-size: 1rem;
-}
-@media (min-width: 765px) {
-  .ProductosCarrito h3 {
-    font-size: 1.5rem;
-  }
 }
 .ProductosCarrito .nombre {
   font-weight: bold;
@@ -1891,6 +1841,39 @@ footer .footer__nav p {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
+}
+.producto-carrito .eliminar-producto {
+  background: rgb(61, 98, 40);
+  padding: 0.2rem;
+  margin-left: 0.7rem;
+  color: white;
+}
+.producto-carrito .eliminar-producto:hover {
+  background: rgb(243, 3, 3);
+  color: rgb(82, 247, 6);
+}
+
+.botones {
+  width: 200px;
+  display: flex;
+  margin: auto;
+}
+.botones .btn-success {
+  margin: 2rem auto;
+  color: white;
+  border: 1px solid green;
+  background: rgba(0, 0, 0, 0.632);
+  width: 100%;
+}
+.botones .btn-success:hover {
+  background: green;
+}
+.botones .btn-success a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.botones .input-group-text {
+  background: rgb(192, 219, 174);
 }
 
 /*# sourceMappingURL=estilo.css.map */
