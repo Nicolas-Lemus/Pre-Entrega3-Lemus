@@ -1818,7 +1818,55 @@ footer .footer__nav p {
   border-radius: 10px;
   width: 70%;
   height: 500px;
-  margin: 100px auto;
+  margin: 0px auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.listado li {
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+.listado li .nombre {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .listado li .nombre {
+    font-size: 1.4rem;
+  }
+}
+.listado li .talle {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .listado li .talle {
+    font-size: 1.3rem;
+  }
+}
+.listado li .precio {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .listado li .precio {
+    font-size: 1.4rem;
+  }
+}
+.listado li .eliminar-producto {
+  background: rgb(61, 98, 40);
+  padding: 0.2rem;
+  margin-right: 0.7rem;
+  color: white;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid green;
+}
+.listado li .eliminar-producto:hover {
+  background: rgb(243, 3, 3);
+  color: rgb(82, 247, 6);
 }
 
 .ProductosCarrito {
@@ -1827,43 +1875,40 @@ footer .footer__nav p {
   font-size: 1rem;
   list-style: none;
 }
-.ProductosCarrito .nombre {
-  font-weight: bold;
-  margin-right: 1rem;
-  font-size: 1rem;
+.ProductosCarrito h2 {
+  font-size: 1.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 2rem;
 }
-.ProductosCarrito .precio {
-  margin-left: auto;
-  font-size: 1rem;
+@media (min-width: 768px) {
+  .ProductosCarrito h2 {
+    font-size: 3rem;
+  }
+}
+.ProductosCarrito #precioTotal {
+  font-size: 2rem;
+  background: rgba(57, 73, 57, 0.358);
+  color: rgb(253, 255, 253);
+  width: 200px;
+  margin: 1rem auto;
+  border-radius: 10px;
 }
 
 .producto-carrito {
   display: flex;
   justify-content: space-around;
-  padding: 1rem;
-}
-.producto-carrito .eliminar-producto {
-  background: rgb(61, 98, 40);
-  padding: 0.2rem;
-  margin-left: 0.7rem;
-  color: white;
-}
-.producto-carrito .eliminar-producto:hover {
-  background: rgb(243, 3, 3);
-  color: rgb(82, 247, 6);
 }
 
 .botones {
   width: 200px;
-  display: flex;
-  margin: auto;
+  margin: 0px auto;
 }
 .botones .btn-success {
-  margin: 2rem auto;
   color: white;
   border: 1px solid green;
   background: rgba(0, 0, 0, 0.632);
   width: 100%;
+  margin-bottom: 1rem;
 }
 .botones .btn-success:hover {
   background: green;

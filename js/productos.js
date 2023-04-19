@@ -63,90 +63,6 @@ inputPrecioMaximo.addEventListener('input', function() {
 
 //talles
 
-/* const talles = [40, 41, 42, 43, 44];
-const productosTalles = document.querySelectorAll('.card');
-const carrito = document.querySelector('.listado');
-const contadorCarrito = document.querySelector('#valorCarrito');
-
-let cantidadProductos = 0;
-let carritoProductos = [];
-
-// Comprobar si hay datos en el Local Storage
-if (localStorage.getItem('carritoProductos')) {
-    carritoProductos = JSON.parse(localStorage.getItem('carritoProductos'));
-    cantidadProductos = carritoProductos.length;
-    actualizarCarrito();
-}
-
-function guardarProductosEnLocalStorage() {
-    localStorage.setItem('carritoProductos', JSON.stringify(carritoProductos));
-    localStorage.setItem('cantidadProductos', cantidadProductos);
-}
-
-function actualizarCarrito() {
-    carrito.innerHTML = '';
-    carritoProductos.forEach((producto, index) => {
-    const li = document.createElement('li');
-    li.classList.add('producto-carrito');
-    li.innerHTML = `
-        <span class="nombre">${producto.nombre}</span>
-        <span>Talle ${producto.talle}</span>
-        <span class="precio">${producto.precio}</span>
-        <button class="eliminar-producto" data-index="${index}">X</button>
-    `;
-    carrito.appendChild(li);
-    });
-    contadorCarrito.textContent = cantidadProductos;
-}
-
-productosTalles.forEach((producto,) => {
-    const nombreProducto = producto.querySelector('.card-title').textContent;
-    const precioProducto = producto.querySelector('.card-text').textContent;
-    const botonesTalles = producto.querySelectorAll('.btn-outline-secondary');
-
-let talleSeleccionado;
-
-botonesTalles.forEach(botonTalle => {
-    botonTalle.addEventListener('click', () => {
-        botonesTalles.forEach(boton => {
-        boton.classList.remove('seleccionado');
-        });
-        botonTalle.classList.add('seleccionado');
-        talleSeleccionado = botonTalle.textContent;
-    });
-});
-
-const botonTarjeta = producto.querySelector('.btn-primary');
-botonTarjeta.addEventListener('click', () => {
-    if (!talleSeleccionado) {
-        return;
-    }
-    const productoSeleccionado = {
-        nombre: nombreProducto,
-        precio: precioProducto,
-        talle: talleSeleccionado
-    };
-    carritoProductos.push(productoSeleccionado);
-    guardarProductosEnLocalStorage();
-    const index = carritoProductos.length - 1;
-    const li = document.createElement('li');
-    li.classList.add('producto-carrito');
-    li.innerHTML = `
-        <span class="nombre">${nombreProducto}</span>
-        <span>Talle ${talleSeleccionado}</span>
-        <span class="precio">${precioProducto}</span>
-        <button class="eliminar-producto" data-index="${index}">X</button>
-    `;
-    carrito.appendChild(li);
-    talleSeleccionado = null;
-    botonesTalles.forEach(boton => {
-        boton.classList.remove('seleccionado');
-    });
-    cantidadProductos++;
-    contadorCarrito.textContent = cantidadProductos;
-    });
-});
- */
 const talles = [40, 41, 42, 43, 44];
 const productosTalles = document.querySelectorAll('.card');
 const carrito = document.querySelector('.listado');
@@ -175,7 +91,7 @@ function actualizarCarrito() {
         li.classList.add('producto-carrito');
         li.innerHTML = `
             <span class="nombre">${producto.nombre}</span>
-            <span>Talle ${producto.talle}</span>
+            <span class="talle">Talle ${producto.talle}</span>
             <span class="precio">${producto.precio}</span>
             <button class="eliminar-producto" data-index="${index}">X</button>
         `;
@@ -218,7 +134,7 @@ productosTalles.forEach((producto,) => {
         li.classList.add('producto-carrito');
         li.innerHTML = `
             <span class="nombre">${nombreProducto}</span>
-            <span>Talle ${talleSeleccionado}</span>
+            <span class="talle">Talle ${talleSeleccionado}</span>
             <span class="precio">${precioProducto}</span>
             <button class="eliminar-producto" data-index="${index}">X</button>
         `;

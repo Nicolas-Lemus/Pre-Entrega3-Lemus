@@ -1,6 +1,6 @@
 
 let ingreso = false;
-let carrito = [];
+/* let carrito = [];
 
  //FUNCION DE PROCESAR COMPRA
 function procesarCompra(productoSeleccionado){
@@ -102,7 +102,7 @@ function confirmarCompras() {
     }
 }
 //funcion agregar producto mediante this
-
+ */
 
 /// INICIO DE SECCION 
 const formInicio = document.querySelector('#formularioInicio'),
