@@ -73,16 +73,18 @@ let cantidadProductos = 0;
 let carritoProductos = [];
 
 // Comprobar si hay datos en el Local Storage
-if (localStorage.getItem('carritoProductos')) {
+if (localStorage.getItem('carritoProductos')){
     carritoProductos = JSON.parse(localStorage.getItem('carritoProductos'));
     cantidadProductos = carritoProductos.length;
     actualizarCarrito();
+    actualizarPrecioTotal();
 }
 
 function guardarProductosEnLocalStorage() {
-    localStorage.setItem('carritoProductos', JSON.stringify(carritoProductos));
+    localStorage.setItem('carritoProductos',JSON.stringify(carritoProductos));
     localStorage.setItem('cantidadProductos', cantidadProductos);
-}
+} 
+
 
 function actualizarCarrito() {
     carrito.innerHTML = '';
@@ -127,6 +129,7 @@ productosTalles.forEach((producto,) => {
             precio: precioProducto,
             talle: talleSeleccionado
         };
+        
         carritoProductos.push(productoSeleccionado);
         guardarProductosEnLocalStorage();
         const index = carritoProductos.length - 1;
@@ -153,11 +156,14 @@ function actualizarPrecioTotal() {
     let precioTotalCarrito = 0;
     const preciosProductos = document.querySelectorAll('.precio');
     preciosProductos.forEach(precioProducto => {
-        const precio = parseFloat(precioProducto.textContent.replace('$', ''));
-        precioTotalCarrito += precio;
+        const precioProductoNumerico = parseFloat(precioProducto.textContent.replace('$', ''));
+        if (!isNaN(precioProductoNumerico)) {
+            precioTotalCarrito += precioProductoNumerico;
+        }
     });
     precioTotal.textContent = `$${precioTotalCarrito.toFixed(2)}`;
 }
+
 
 carrito.addEventListener('click', (event) => {
     if (event.target.classList.contains('eliminar-producto')) {
@@ -166,5 +172,6 @@ carrito.addEventListener('click', (event) => {
     guardarProductosEnLocalStorage();
     cantidadProductos--;
     actualizarCarrito();
+    actualizarPrecioTotal();
     }
 }); 
