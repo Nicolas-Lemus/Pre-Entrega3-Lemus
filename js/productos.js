@@ -68,7 +68,6 @@ const productosTalles = document.querySelectorAll('.card');
 const carrito = document.querySelector('.listado');
 const contadorCarrito = document.querySelector('#valorCarrito');
 const precioTotal = document.querySelector('#precioTotal');
-
 let cantidadProductos = 0;
 let carritoProductos = [];
 
@@ -101,7 +100,6 @@ function actualizarCarrito() {
     });
     contadorCarrito.textContent = cantidadProductos;
 }
-
 productosTalles.forEach((producto,) => {
     const nombreProducto = producto.querySelector('.card-title').textContent;
     const precioProducto = producto.querySelector('.card-text').textContent;
@@ -129,7 +127,6 @@ productosTalles.forEach((producto,) => {
             precio: precioProducto,
             talle: talleSeleccionado
         };
-        
         carritoProductos.push(productoSeleccionado);
         guardarProductosEnLocalStorage();
         const index = carritoProductos.length - 1;
@@ -156,14 +153,13 @@ function actualizarPrecioTotal() {
     let precioTotalCarrito = 0;
     const preciosProductos = document.querySelectorAll('.precio');
     preciosProductos.forEach(precioProducto => {
-        const precioProductoNumerico = parseFloat(precioProducto.textContent.replace('$', ''));
+        const precioProductoNumerico = parseFloat(precioProducto.textContent.replace('Precio: $', ''));
         if (!isNaN(precioProductoNumerico)) {
             precioTotalCarrito += precioProductoNumerico;
         }
     });
-    precioTotal.textContent = `$${precioTotalCarrito.toFixed(2)}`;
+    precioTotal.textContent  = `$${precioTotalCarrito.toFixed(2)}`;
 }
-
 
 carrito.addEventListener('click', (event) => {
     if (event.target.classList.contains('eliminar-producto')) {
@@ -175,3 +171,10 @@ carrito.addEventListener('click', (event) => {
     actualizarPrecioTotal();
     }
 }); 
+
+
+/* const botonComprar=document.querySelector("#confirmarCompra");
+const botonCancelar 
+
+*/
+
