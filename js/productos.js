@@ -173,8 +173,15 @@ carrito.addEventListener('click', (event) => {
 }); 
 
 
-/* const botonComprar=document.querySelector("#confirmarCompra");
-const botonCancelar 
+const botonComprar=document.querySelector("#confirmarCompra");
+botonComprar.addEventListener("click" ,()=>{
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Gracias por tu compra',
+        showConfirmButton: false,
+        timer: 2500,
+    });
+});
 
-*/
 

@@ -12,7 +12,7 @@ formInicio.addEventListener('submit',function(e){
     const apellido = apellidoInput.value;
     const tarjeta = tarjetaInput.value;
         if (!apellido || !tarjeta) {
-            alertaInicio.innerHTML = 'Ingrese el apellido y la tarjeta';
+            alertaInicio.innerHTML ='Ingrese el apellido y la tarjeta' 
             return;
         }
     const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
@@ -24,3 +24,4 @@ formInicio.addEventListener('submit',function(e){
         window.location.href = "pages/compras.html";
     }
 });
+

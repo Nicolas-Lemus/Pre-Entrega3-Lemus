@@ -1,13 +1,16 @@
-
 .listado{
     border: 3px solid green;
     border-radius: 10px;
-    width: 70%;
+    width: 90%;
     height: 500px;
     margin: 0px auto;
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
+
+    @media (min-width:768px){
+        width: 730px;
+    }
 
     li{
         justify-content: space-around;
@@ -32,7 +35,7 @@
         }
         .precio{
             font-family: 'Courier New', Courier, monospace;
-            font-size: .8rem;
+            font-size: 1rem;
 
             @media (min-width:768px){
                 font-size: 1.4rem;
@@ -47,6 +50,7 @@
             height: 2rem;
             border-radius: 50%;
             border: 1px solid green;
+            width: 2rem;
     
             &:hover{
                 background: rgb(243, 3, 3);
@@ -64,12 +68,17 @@
 
     h2{
         font-size: 1.5rem;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+        font-family:'Skranji', cursive;
         margin-bottom: 2rem;
 
         @media (min-width:768px){
             font-size: 3rem;
         }
+    }
+    .detallesProductos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
     #precioTotal {
