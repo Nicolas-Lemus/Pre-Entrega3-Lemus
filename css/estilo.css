@@ -1540,6 +1540,8 @@ footer .footer__nav p {
   width: 100%;
   object-fit: cover;
   display: none;
+  animation: zoomIn;
+  animation-duration: 2s;
 }
 @media (min-width: 992px) {
   .parte-2 img {
@@ -1728,6 +1730,10 @@ footer .footer__nav p {
 .productos .imagenes__productos .card .btn-primary:hover {
   background: green;
 }
+.productos .imagenes__productos .card .btn-primary:hover:hover {
+  animation: pulse;
+  animation-duration: 2s;
+}
 .productos .imagenes__productos .card h6 {
   color: white;
 }
@@ -1806,6 +1812,10 @@ footer .footer__nav p {
 
 #carritoImage img {
   width: 30px;
+}
+#carritoImage img:hover {
+  animation: bounce;
+  animation-duration: 1s;
 }
 @media (min-width: 765px) {
   #carritoImage img {

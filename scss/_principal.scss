@@ -32,6 +32,9 @@ main{
         object-fit: cover;
         display: none;
 
+        animation:zoomIn ;
+        animation-duration:2s;
+
         @media (min-width:992px) {
             display: block;
         }

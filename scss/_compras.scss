@@ -78,6 +78,10 @@
 
                 &:hover{
                     background:green;
+                    &:hover{
+                        animation:pulse ;
+                        animation-duration:2s;
+                    }
                 }
             }
             h6{
@@ -160,6 +164,11 @@
 #carritoImage{
     img{
         width: 30px;
+
+        &:hover{
+            animation: bounce;
+            animation-duration:1s;
+        }
 
         @media (min-width:765px) {
             width: 50px;
