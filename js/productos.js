@@ -171,17 +171,48 @@ carrito.addEventListener('click', (event) => {
     actualizarPrecioTotal();
     }
 }); 
+const botonComprar = document.querySelector("#confirmarCompra");
+botonComprar.addEventListener("click", () => {
+    if (parseFloat(precioTotal.textContent.slice(1)) === 0) {
+        Swal.fire({
+            icon: 'error',
+            title: "Verificar!",
+            text: 'Tu Carrito esta vacio!',
+            timer: 3000,
+            })
+    } else {
+    Swal.fire({
+        icon: "success",
+        title: "Gracias por tu compra",
+        showConfirmButton: false,
+        timer: 3000,
+    });
+    carritoProductos = [];
+    cantidadProductos = 0;
+    actualizarCarrito();
+    actualizarPrecioTotal();
+    localStorage.removeItem("carritoProductos");
+    localStorage.removeItem("cantidadProductos");
+    }
+});
 
 
-const botonComprar=document.querySelector("#confirmarCompra");
+/* const botonComprar=document.querySelector("#confirmarCompra");
 botonComprar.addEventListener("click" ,()=>{
     Swal.fire({
         position: 'top-end',
         icon: 'success',
         title: 'Gracias por tu compra',
         showConfirmButton: false,
-        timer: 2500,
+        timer: 3000,
     });
+    carritoProductos = [];
+    cantidadProductos = 0;
+    actualizarCarrito();
+    actualizarPrecioTotal();
+    localStorage.removeItem('carritoProductos');
+    localStorage.removeItem('cantidadProductos');
 });
+ */
 
 

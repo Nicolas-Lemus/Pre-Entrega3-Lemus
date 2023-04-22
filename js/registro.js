@@ -3,31 +3,51 @@
 
 //Registro
 
-const formRegistro = document.querySelector('#registroNuevo'),
-    apellidoNuevoInput = document.querySelector('#apellidoNuevo'),
-    tarjetaNuevaInput = document.querySelector('#tarjetaNueva'),
-    alertaRegistro = document.querySelector('#alertaRegistro');
-        
-    formRegistro.addEventListener('submit',function(e){
-        e.preventDefault();
-        const apellidoNuevo = apellidoNuevoInput.value;
-        const tarjetaNueva = tarjetaNuevaInput.value;
-            if (!apellidoNuevo || !tarjetaNueva) {
-                alertaRegistro.innerHTML = 'Ingrese el apellido y la tarjeta';
-                return;
+const formRegistro = document.querySelector('#registroNuevo');
+const apellidoNuevoInput = document.querySelector('#apellidoNuevo');
+const tarjetaNuevaInput = document.querySelector('#tarjetaNueva');
+
+formRegistro.addEventListener('submit',function(e){
+    e.preventDefault();
+    const apellidoNuevo = apellidoNuevoInput.value;
+    const tarjetaNueva = tarjetaNuevaInput.value;
+    if (!apellidoNuevo || !tarjetaNueva) {
+        Swal.fire({
+            icon: "error",
+            title: "Ingrese Apellido y Tarjeta",
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        return;
+    }
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioExistente = usuariosRegistrados.find(usuario => usuario.apellido === apellidoNuevo && usuario.tarjeta === tarjetaNueva);
+    if (usuarioExistente) {
+        Swal.fire({
+            title: 'El usuario ya existe',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
             }
-        const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
-        const usuarioExistente = usuariosRegistrados.find(usuario => usuario.apellido === apellidoNuevo && usuario.tarjeta === tarjetaNueva);
-            if (usuarioExistente) {
-                alertaRegistro.innerHTML = 'El usuario ya existe';
-                return;
-            }
-        const usuarioNuevo = {
-            apellido: apellidoNuevo,
-            tarjeta: tarjetaNueva
-        };
-        usuariosRegistrados.push(usuarioNuevo);
-        localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
-        alertaRegistro.innerHTML = 'Registro exitoso!';
+        });
+        return;
+    }
+    const usuarioNuevo = {
+        apellido: apellidoNuevo,
+        tarjeta: tarjetaNueva
+    };
+    usuariosRegistrados.push(usuarioNuevo);
+    localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
+    Swal.fire({
+        icon: "success",
+        title: "Registro Exitoso!",
+        showConfirmButton: false,
+        timer: 2500,
+    }).then(() => {
         formRegistro.reset();
+        window.location.href = "../index.html";
+    });
 });
+
