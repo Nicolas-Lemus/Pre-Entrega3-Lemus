@@ -78,10 +78,8 @@
 
                 &:hover{
                     background:green;
-                    &:hover{
-                        animation:pulse ;
-                        animation-duration:2s;
-                    }
+                    animation:pulse ;
+                    animation-duration:2s;
                 }
             }
             h6{
@@ -135,7 +133,9 @@
             width: 150px;
 
             &:hover{
-                background: green;
+                background: rgb(2, 255, 2);
+                animation:pulse;
+                animation-duration:2s;
             }
             a{
                 text-decoration: none;

@@ -1624,6 +1624,8 @@ footer .footer__nav p {
 }
 .ingreso .btn-success:hover {
   background: green;
+  animation: pulse;
+  animation-duration: 2s;
 }
 .ingreso .btn-success a {
   text-decoration: none;
@@ -1729,8 +1731,6 @@ footer .footer__nav p {
 }
 .productos .imagenes__productos .card .btn-primary:hover {
   background: green;
-}
-.productos .imagenes__productos .card .btn-primary:hover:hover {
   animation: pulse;
   animation-duration: 2s;
 }
@@ -1783,7 +1783,9 @@ footer .footer__nav p {
   width: 150px;
 }
 .productos .salir .btn-success:hover {
-  background: green;
+  background: rgb(2, 255, 2);
+  animation: pulse;
+  animation-duration: 2s;
 }
 .productos .salir .btn-success a {
   text-decoration: none;
@@ -1937,6 +1939,8 @@ footer .footer__nav p {
 }
 .botones .btn-success:hover {
   background: green;
+  animation: pulse;
+  animation-duration: 2s;
 }
 .botones .btn-success a {
   text-decoration: none;

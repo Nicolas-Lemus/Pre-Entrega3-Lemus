@@ -113,6 +113,8 @@ main{
 
         &:hover{
             background: green;
+            animation:pulse;
+            animation-duration:2s;
         }
 
         a{
