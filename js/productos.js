@@ -41,7 +41,7 @@ buscador.addEventListener("keyup" , e => {
     }
 });
 
-// Definimos la función que filtrará las cards por precio
+//filtrado por precio
 const productos = document.querySelectorAll('.card');
 function filtrarPorPrecio(precioMaximo) {
     for (let i = 0; i < productos.length; i++) {
